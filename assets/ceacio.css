@@ -21,7 +21,7 @@
   --cx-teal: #198075;
   --cx-teal-light: #59e3d5;
   --cx-ink: #051c1a;
-  --cx-mint: #d6fffb;
+  --cx-mint: #ebf4f5;
   --cx-text: #555;
   box-sizing: border-box;
   width: 100%;
@@ -64,7 +64,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  align-items: start;
+  align-items: stretch; /* both cards the same height */
 }
 .cx-glance__card { border-radius: 16px; padding: 36px 36px 28px; }
 .cx-glance__card--materials { background: var(--cx-mint); }
