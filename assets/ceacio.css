@@ -1,0 +1,143 @@
+/* Ceacio site styles layered on top of the Framer export.
+   Loaded on every page after Framer's own styles. */
+
+/* Some Framer text boxes have fixed widths wider than their cards on tablet and phone,
+   which cut text off at the card edge. Let them shrink to the card instead. */
+@media (max-width: 1199.98px) {
+  #main [data-framer-component-type="RichTextContainer"] {
+    max-width: 100%;
+  }
+}
+
+/* About → "Who we are": keep a gap between its two paragraphs. */
+#main .framer-64sitg > p + p {
+  margin-top: 1em !important;
+}
+
+/* ---------------------------------------------------------------------------
+   "What we do at a glance" (Home and Services)
+   --------------------------------------------------------------------------- */
+.cx-glance {
+  --cx-teal: #198075;
+  --cx-teal-light: #59e3d5;
+  --cx-ink: #051c1a;
+  --cx-mint: #d6fffb;
+  --cx-text: #555;
+  box-sizing: border-box;
+  width: 100%;
+  align-self: stretch;
+  padding: 100px 40px;
+  background: #fff;
+  font-family: "Manrope", "Manrope Placeholder", sans-serif;
+  color: var(--cx-ink);
+}
+.cx-glance--tint { background: #fafafa; }
+.cx-glance *, .cx-glance *::before, .cx-glance *::after { box-sizing: border-box; }
+.cx-glance__inner { max-width: 1120px; margin: 0 auto; }
+.cx-glance__head { max-width: 720px; margin: 0 auto 56px; text-align: center; }
+.cx-glance__eyebrow {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--cx-teal);
+}
+.cx-glance__title {
+  margin: 0;
+  font-size: 56px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: var(--cx-ink);
+}
+.cx-glance__title em { font-style: italic; color: var(--cx-teal); }
+.cx-glance__lead {
+  margin: 20px auto 0;
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--cx-text);
+}
+.cx-glance__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.cx-glance__card { border-radius: 16px; padding: 36px 36px 28px; }
+.cx-glance__card--materials { background: var(--cx-mint); }
+.cx-glance__card--services { background: var(--cx-ink); color: #fff; }
+.cx-glance__card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(5, 28, 26, 0.12);
+}
+.cx-glance__card--services .cx-glance__card-head { border-bottom-color: rgba(255, 255, 255, 0.14); }
+.cx-glance__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--cx-teal);
+  color: #fff;
+}
+.cx-glance__card-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.cx-glance__count {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cx-teal);
+  white-space: nowrap;
+}
+.cx-glance__card--services .cx-glance__count { color: var(--cx-teal-light); }
+.cx-glance__list { list-style: none; margin: 0; padding: 0; }
+.cx-glance__list li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(5, 28, 26, 0.08);
+  font-size: 17px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+.cx-glance__list li:last-child { border-bottom: 0; }
+.cx-glance__card--services .cx-glance__list li { border-bottom-color: rgba(255, 255, 255, 0.08); }
+.cx-glance__num {
+  flex: 0 0 auto;
+  min-width: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cx-teal);
+  font-variant-numeric: tabular-nums;
+}
+.cx-glance__card--services .cx-glance__num { color: var(--cx-teal-light); }
+
+@media (max-width: 1199.98px) {
+  .cx-glance { padding: 80px 20px; }
+  .cx-glance__title { font-size: 44px; }
+}
+@media (max-width: 809.98px) {
+  .cx-glance { padding: 64px 20px; }
+  .cx-glance__head { margin-bottom: 36px; }
+  .cx-glance__eyebrow { font-size: 16px; }
+  .cx-glance__title { font-size: 36px; }
+  .cx-glance__grid { grid-template-columns: 1fr; gap: 16px; }
+  .cx-glance__card { padding: 28px 22px 18px; }
+  .cx-glance__card-title { font-size: 24px; }
+  .cx-glance__list li { font-size: 16px; padding: 12px 0; }
+}
