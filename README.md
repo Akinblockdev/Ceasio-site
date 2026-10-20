@@ -48,9 +48,18 @@ both. New sections can be added the way "What we do at a glance" was: an element
 
 ## Things to know
 
-- **Domain.** Canonical links, Open Graph tags, the sitemap and `robots.txt` assume
-  `https://ceacio.com`. If the site will live elsewhere, find-and-replace `https://ceacio.com` across
-  the HTML, `sitemap.xml`, `robots.txt` and `assets/framer/sites/*/script_main.*.mjs`.
+- **Domain.** The site's main address is `https://www.ceacio.com` (Vercel redirects `ceacio.com` to it).
+  Canonical links, Open Graph tags, structured data, the sitemap, `robots.txt`, `llms.txt` and
+  `siteCanonicalURL` in `assets/framer/sites/*/script_main.*.mjs` all use it.
+- **SEO.** Each page has its own title, description and 1200×630 header screenshot (`assets/seo/`),
+  set in the page HTML and in that page's Framer metadata module (the `description:`/`socialImage:`/`title:`
+  fields). JSON-LD in each page's `<head>` (`data-cx-seo`) describes the company, the page, breadcrumbs,
+  the FAQ (Home) and the services (Services). `sitemap.xml` lists page images; `llms.txt` summarises the
+  business for AI assistants. Image alt text is set in the HTML and modules, and a small `data-cx-alt`
+  script fills it in for CMS images. If you change page copy, FAQ answers or services, update these too.
+- **Script caching.** Files under `/assets/framer/` are cached by browsers for a year. Never edit a `.mjs`
+  file in place: save the change under a new file name and update everything that references it (other
+  modules and the HTML pages), or returning visitors keep the old version.
 - **Contact form.** Submissions go to augustine.chukwudozie@gmail.com through
   [FormSubmit](https://formsubmit.co) (no backend needed). The first submission from the live domain
   sends an "Activate Form" email to that address; messages are delivered once it's clicked. After

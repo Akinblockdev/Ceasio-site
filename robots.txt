@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /404
 
-Sitemap: https://ceacio.com/sitemap.xml
+Sitemap: https://www.ceacio.com/sitemap.xml
