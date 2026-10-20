@@ -326,3 +326,154 @@
     width: auto !important;
   }
 }
+
+
+/* ---------------------------------------------------------------------------
+   "What drives us" (Home and About): Our Mission / Our Vision
+   Same card look, icon tiles and text sizes as the "Who we are" value cards,
+   and the same overall width as the section above it.
+   --------------------------------------------------------------------------- */
+:root {
+  --cx-drives-icon-mission: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3C/svg%3E");
+  --cx-drives-icon-vision: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E");
+}
+.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  padding: 28px 24px !important;
+  background: #ebf4f5 !important;
+  border: 1px solid rgba(25, 128, 117, 0.12) !important;
+  border-radius: 16px !important;
+  overflow: visible !important;
+}
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr)::before {
+  content: "";
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #198075 center / 24px 24px no-repeat;
+}
+:is(.framer-1hqbmzc, .framer-ug8y8r, .framer-1vtpd8x, .framer-8he119)::before { background-image: var(--cx-drives-icon-mission); }
+:is(.framer-1ybn3y4, .framer-1na7cx7, .framer-vi91k9, .framer-144klsr)::before { background-image: var(--cx-drives-icon-vision); }
+/* Text block back in the flow; Framer's black icon images replaced by the tiles above */
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) > * {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  height: auto !important;
+  gap: 8px !important;
+  justify-content: flex-start !important;
+}
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) > * > :first-child { display: none !important; }
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) [data-framer-component-type="RichTextContainer"] {
+  align-self: stretch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) p.framer-text {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #555 !important;
+}
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) > * > :nth-child(2) p.framer-text {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #051c1a !important;
+}
+/* Framer splits some descriptions into two paragraphs mid-sentence; rejoin them */
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) [data-framer-component-type="RichTextContainer"]:has(> p.framer-text + p.framer-text) { display: block !important; }
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) [data-framer-component-type="RichTextContainer"] > p.framer-text + p.framer-text,
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) [data-framer-component-type="RichTextContainer"]:has(> p.framer-text + p.framer-text) > p.framer-text { display: inline !important; }
+:is(.framer-1hqbmzc, .framer-1ybn3y4, .framer-ug8y8r, .framer-1na7cx7, .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) [data-framer-component-type="RichTextContainer"] > p.framer-text + p.framer-text::before { content: " "; }
+/* "What drives us" heading: left-aligned with the content at every size */
+.framer-zytspw, .framer-13ws4gu {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  padding: 0 !important;
+  align-self: center !important;
+}
+.framer-zytspw p, .framer-13ws4gu p { text-align: left !important; }
+/* Card columns: two cards share the image's height */
+.framer-1shr9cr, .framer-platw2, .framer-1ej0sdw, .framer-dpw9a4 {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  width: 100% !important;
+  height: auto !important;
+  min-width: 0 !important;
+}
+.framer-6m4130, .framer-1qxrgha, .framer-17wrg4j, .framer-kfh598,
+.framer-16dc1qf, .framer-fq2i1b, .framer-1uj4c83, .framer-1ib10av {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  height: auto !important;
+}
+/* Image: fill its column, rounded like the cards */
+.framer-8pbjip, .framer-61e4cw, .framer-b858bm, .framer-jd5qal {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 300px !important;
+  align-self: stretch !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+.framer-8pbjip > :not(.ssr-variant), .framer-8pbjip > .ssr-variant > *,
+.framer-61e4cw > :not(.ssr-variant), .framer-61e4cw > .ssr-variant > * {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 16px !important;
+}
+
+/* ---- Desktop and tablet (810px and up) ---- */
+@media (min-width: 810px) {
+  .framer-1kg6d1c, .framer-1en0ge1 {
+    display: grid !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+}
+/* Desktop: Home mirrors "Who we are" (564px text | 48px | 580px cards); About mirrors its two halves */
+@media (min-width: 1200px) {
+  .framer-wlkmtn { width: 100% !important; max-width: 1192px !important; }
+  .framer-1kg6d1c, .framer-zytspw { max-width: 1192px !important; }
+  .framer-1kg6d1c { grid-template-columns: minmax(0, 564fr) minmax(0, 580fr); gap: 48px !important; }
+  .framer-1en0ge1, .framer-13ws4gu { max-width: 1106px !important; }
+  .framer-1en0ge1 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 30px !important; }
+}
+/* Tablet: image and cards side by side at the full content width */
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .framer-1kg6d1c, .framer-1en0ge1 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px !important; }
+}
+
+/* ---- Phone (below 810px): image on top, cards stacked ---- */
+@media (max-width: 809.98px) {
+  .framer-10ztnqn, .framer-jzd6hx {
+    gap: 16px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .framer-b858bm, .framer-jd5qal { min-height: 240px !important; }
+}
+@media (max-width: 559.98px) {
+  .framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr {
+    flex-direction: row !important;
+    padding: 20px !important;
+  }
+  :is(.framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr)::before { width: 44px; height: 44px; background-size: 22px 22px; }
+  :is(.framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) > * { flex: 1 1 0 !important; min-width: 0 !important; width: auto !important; }
+}
