@@ -141,3 +141,188 @@
   .cx-glance__card-title { font-size: 24px; }
   .cx-glance__list li { font-size: 16px; padding: 12px 0; }
 }
+
+/* ---------------------------------------------------------------------------
+   "Who we are" value cards (Home, About, and Services on phone)
+   Operational Excellence · Uncompromising Integrity · Empowering People ·
+   Safety & Sustainability. Framer lays these out with fixed sizes and
+   absolutely positioned text; this turns them into a responsive grid, gives
+   each card an icon and the #EBF4F5 background.
+   Desktop/tablet versions show at 810px and up, phone versions below 810px
+   (Framer hides the other one), so each rule is scoped to its own range.
+   --------------------------------------------------------------------------- */
+:root {
+  --cx-values-icon-excellence: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='6'/%3E%3Cpath d='M15.477 12.89 17 22l-5-3-5 3 1.523-9.11'/%3E%3C/svg%3E");
+  --cx-values-icon-integrity: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'/%3E%3Cpath d='m9 12 2 2 4-4'/%3E%3C/svg%3E");
+  --cx-values-icon-people: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.87'/%3E%3Cpath d='M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E");
+  --cx-values-icon-safety: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'/%3E%3Cpath d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12'/%3E%3C/svg%3E");
+}
+
+/* Shared card look, used at every size */
+.framer-rh27ks, .framer-ceog1b, .framer-1e20pi1, .framer-15546z6,      /* Home, desktop/tablet */
+.framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,      /* Home, phone */
+.framer-1cs0w4e, .framer-rtyb83, .framer-1nio2kj, .framer-y3v1be,      /* About, desktop/tablet */
+.framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,      /* About, phone */
+.framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9 {    /* Services, phone */
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  box-sizing: border-box !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  padding: 28px 24px !important;
+  background: #ebf4f5 !important;
+  border: 1px solid rgba(25, 128, 117, 0.12) !important;
+  border-radius: 16px !important;
+  overflow: visible !important;
+}
+/* The icon tile */
+:is(.framer-rh27ks, .framer-ceog1b, .framer-1e20pi1, .framer-15546z6,
+    .framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,
+    .framer-1cs0w4e, .framer-rtyb83, .framer-1nio2kj, .framer-y3v1be,
+    .framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,
+    .framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9)::before {
+  content: "";
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #198075 center / 24px 24px no-repeat;
+}
+:is(.framer-rh27ks, .framer-j0ywxs, .framer-1cs0w4e, .framer-v2upql, .framer-xa85g0)::before { background-image: var(--cx-values-icon-excellence); }
+:is(.framer-ceog1b, .framer-gb73qs, .framer-rtyb83, .framer-1g4u65g, .framer-121akrh)::before { background-image: var(--cx-values-icon-integrity); }
+:is(.framer-1e20pi1, .framer-1otd7dk, .framer-1nio2kj, .framer-1hkg6he, .framer-1heeqis)::before { background-image: var(--cx-values-icon-people); }
+:is(.framer-15546z6, .framer-1nj3vf4, .framer-y3v1be, .framer-sdt1wv, .framer-1vh7qp9)::before { background-image: var(--cx-values-icon-safety); }
+
+/* The text block inside each card: Framer centres it absolutely; put it back in the flow */
+:is(.framer-rh27ks, .framer-ceog1b, .framer-1e20pi1, .framer-15546z6,
+    .framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,
+    .framer-1cs0w4e, .framer-rtyb83, .framer-1nio2kj, .framer-y3v1be,
+    .framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,
+    .framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9) > * {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  height: auto !important;
+  gap: 8px !important;
+  justify-content: flex-start !important;
+}
+:is(.framer-rh27ks, .framer-ceog1b, .framer-1e20pi1, .framer-15546z6,
+    .framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,
+    .framer-1cs0w4e, .framer-rtyb83, .framer-1nio2kj, .framer-y3v1be,
+    .framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,
+    .framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9) [data-framer-component-type="RichTextContainer"] {
+  align-self: stretch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+/* Readable sizes everywhere (Framer drops descriptions to 10–12px on tablet and phone) */
+:is(.framer-rh27ks, .framer-ceog1b, .framer-1e20pi1, .framer-15546z6,
+    .framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,
+    .framer-1cs0w4e, .framer-rtyb83, .framer-1nio2kj, .framer-y3v1be,
+    .framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,
+    .framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9) p.framer-text {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #555 !important;
+}
+:is(.framer-rh27ks, .framer-ceog1b, .framer-1e20pi1, .framer-15546z6,
+    .framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,
+    .framer-1cs0w4e, .framer-rtyb83, .framer-1nio2kj, .framer-y3v1be,
+    .framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,
+    .framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9) > * > :first-child p.framer-text {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #051c1a !important;
+}
+
+/* Rows and per-card wrappers step aside so the cards sit directly in one grid */
+.framer-1ltjlfp, .framer-jmlm4z, .framer-1y684in, .framer-1az4z4t, .framer-1uvp356, .framer-mp1hmt,
+.framer-1qk3tvn, .framer-5o4lwe, .framer-1k3lgdp, .framer-1h0wy45, .framer-3j7eu9, .framer-qat4yj {
+  /* desktop/tablet versions; harmless below 810px, where their parents are hidden */
+  display: contents !important;
+}
+.framer-zpz13s, .framer-twirts, .framer-13o9xpi, .framer-b2c08, .framer-anjdzh, .framer-1eq71od,
+.framer-1cpmwtk, .framer-oqzbxi, .framer-u28lqh, .framer-158vvch, .framer-1lqhe97, .framer-8qncmp,
+.framer-hz9cm9, .framer-8dqsrk, .framer-tzvwzd, .framer-18eft1n, .framer-g0dntn, .framer-1vp2zjf {
+  display: contents !important;
+}
+
+/* ---- Desktop and tablet (810px and up) ---- */
+@media (min-width: 810px) {
+  .framer-vaio5t, .framer-8q7x8w {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+  /* Home: cards share the row with the "Who we are" text */
+  .framer-vaio5t { flex: 1 1 0 !important; min-width: 0 !important; max-width: 580px !important; }
+  .framer-wlkmtn { gap: 48px !important; height: auto !important; }
+  /* About: one row of four on desktop */
+  .framer-8q7x8w { max-width: 1120px !important; }
+}
+@media (min-width: 1200px) {
+  .framer-8q7x8w { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+/* Tablet: Home stacks the text above a full-width 2×2 grid */
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .framer-wlkmtn {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 40px !important;
+  }
+  .framer-1c9ptc { width: 100% !important; max-width: 720px !important; }
+  .framer-vaio5t { flex: none !important; max-width: none !important; }
+  .framer-8q7x8w { max-width: 760px !important; }
+}
+
+/* ---- Phone (below 810px) ---- */
+@media (max-width: 809.98px) {
+  .framer-ie1wxj, .framer-nytpfl, .framer-ik2xs2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+}
+/* Small phones: one card per row, icon beside the text */
+@media (max-width: 559.98px) {
+  .framer-ie1wxj, .framer-nytpfl, .framer-ik2xs2 { grid-template-columns: minmax(0, 1fr); }
+  .framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,
+  .framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,
+  .framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9 {
+    flex-direction: row !important;
+    gap: 16px !important;
+    padding: 20px !important;
+  }
+  :is(.framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,
+      .framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,
+      .framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9)::before {
+    width: 44px;
+    height: 44px;
+    background-size: 22px 22px;
+  }
+  :is(.framer-j0ywxs, .framer-gb73qs, .framer-1otd7dk, .framer-1nj3vf4,
+      .framer-v2upql, .framer-1g4u65g, .framer-1hkg6he, .framer-sdt1wv,
+      .framer-xa85g0, .framer-121akrh, .framer-1heeqis, .framer-1vh7qp9) > * {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
+  }
+}
