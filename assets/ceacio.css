@@ -477,3 +477,20 @@
   :is(.framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr)::before { width: 44px; height: 44px; background-size: 22px 22px; }
   :is(.framer-1vtpd8x, .framer-vi91k9, .framer-8he119, .framer-144klsr) > * { flex: 1 1 0 !important; min-width: 0 !important; width: auto !important; }
 }
+
+/* ---------------------------------------------------------------------------
+   Home → "Your single trusted partner": rounded image like the rest of the site
+   --------------------------------------------------------------------------- */
+.framer-12ougbl {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+.framer-12ougbl > div, .framer-12ougbl img { border-radius: 16px !important; }
+/* Phone: Framer sets this image to 200% wide; keep it inside the screen */
+@media (max-width: 809.98px) {
+  .framer-12ougbl {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1.66667 !important;
+  }
+}
