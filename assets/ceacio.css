@@ -494,3 +494,103 @@
     aspect-ratio: 1.66667 !important;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Footer → Contact: email address removed (all pages)
+   --------------------------------------------------------------------------- */
+.framer-7r88r { display: none !important; }
+
+/* ---------------------------------------------------------------------------
+   Home → "Let's work together" contact form
+   Light #EBF4F5 card, white fields with teal focus, teal submit button
+   (#198075, the colour of the site's green bands).
+   --------------------------------------------------------------------------- */
+form.framer-bbuiry {
+  background: #ebf4f5 !important;
+  border: 1px solid rgba(25, 128, 117, 0.15) !important;
+  border-radius: 20px !important;
+  padding: 40px 32px !important;
+  gap: 20px !important;
+  overflow: hidden !important;
+}
+/* Labels */
+form.framer-bbuiry label p.framer-text {
+  color: #051c1a !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+form.framer-bbuiry label p.framer-text span.framer-text {
+  color: #6b7f7c !important;
+  font-weight: 500 !important;
+}
+/* Fields: Framer styles its inputs through these variables */
+form.framer-bbuiry .framer-form-input-wrapper {
+  --framer-input-background: #ffffff !important;
+  --framer-input-border-color: #cfe0df !important;
+  --framer-input-border-top-width: 1px !important;
+  --framer-input-border-right-width: 1px !important;
+  --framer-input-border-bottom-width: 1px !important;
+  --framer-input-border-left-width: 1px !important;
+  --framer-input-border-style: solid !important;
+  --framer-input-border-radius-top-left: 10px !important;
+  --framer-input-border-radius-top-right: 10px !important;
+  --framer-input-border-radius-bottom-right: 10px !important;
+  --framer-input-border-radius-bottom-left: 10px !important;
+  --framer-input-focused-border-color: #198075 !important;
+  --framer-input-focused-border-width: 1px !important;
+  --framer-input-focused-border-style: solid !important;
+  --framer-input-font-color: #051c1a !important;
+  --framer-input-placeholder-color: #8a9b99 !important;
+  --framer-input-box-shadow: none !important;
+  background: #ffffff !important;
+  border-radius: 10px !important;
+  transition: box-shadow 0.15s ease !important;
+}
+form.framer-bbuiry .framer-form-input-wrapper:hover { --framer-input-border-color: #9fc7c2 !important; }
+form.framer-bbuiry .framer-form-input-wrapper:focus-within {
+  box-shadow: 0 0 0 3px rgba(25, 128, 117, 0.18) !important;
+}
+form.framer-bbuiry .framer-form-input {
+  color: #051c1a !important;
+  -webkit-text-fill-color: #051c1a !important;
+  font-size: 15px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+form.framer-bbuiry .framer-form-input::placeholder {
+  color: #8a9b99 !important;
+  -webkit-text-fill-color: #8a9b99 !important;
+  opacity: 1 !important;
+}
+form.framer-bbuiry textarea.framer-form-input { min-height: 130px !important; }
+/* Browser autofill keeps the white field */
+form.framer-bbuiry .framer-form-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+}
+/* Submit */
+form.framer-bbuiry button {
+  height: 52px !important;
+  background: #198075 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease !important;
+}
+form.framer-bbuiry button:hover { background: #146a61 !important; }
+form.framer-bbuiry button:active { transform: translateY(1px); }
+form.framer-bbuiry button:focus-visible { outline: 3px solid rgba(25, 128, 117, 0.4) !important; outline-offset: 2px; }
+form.framer-bbuiry button p.framer-text,
+form.framer-bbuiry button p.framer-text * {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+form.framer-bbuiry button * { background: transparent !important; }
+/* Phone: Name and Email stacked */
+@media (max-width: 809.98px) {
+  form.framer-bbuiry { padding: 28px 20px !important; }
+  .framer-133l8r5 { flex-direction: column !important; gap: 20px !important; }
+  .framer-133l8r5 > label { width: 100% !important; flex: none !important; }
+}
